@@ -2840,161 +2840,147 @@ button.swiper-pagination-bullet {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-.massage-section {
-  padding: 80px 0;
-  background: #f9f9f9;
-  font-family: "Arial", sans-serif;
-}
-
-.massage-section .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.massage-section .section-header {
+.massage-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 50px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 40px 0;
 }
 
-.massage-section .section-header .section-number {
-  font-size: 24px;
-  font-weight: bold;
-  color: #888;
-  margin-right: 15px;
+.massage-grid__container {
+  padding: 40px 100px;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  gap: 20px;
 }
 
-.massage-section .section-header .section-title {
-  margin: 0;
-  font-size: 36px;
-  font-weight: 700;
-  color: #222;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.massage-section .section-header .section-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 80px;
-  height: 4px;
-  background: -webkit-gradient(linear, left top, right top, from(#4ecdc4), to(#ff6b6b));
-  background: linear-gradient(to right, #4ecdc4, #ff6b6b);
-  border-radius: 2px;
-}
-
-.massage-section .massage-grid {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.massage-section .massage-card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
-  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
-}
-
-.massage-section .massage-card:hover {
-  -webkit-transform: translateY(-5px);
-      -ms-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.massage-section .massage-card .card-content {
-  padding: 30px;
-}
-
-.massage-section .massage-card .card-content .card-title {
-  font-size: 22px;
-  margin: 0 0 15px 0;
-  color: #002244;
-  position: relative;
-}
-
-.massage-section .massage-card .card-content .card-title::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 40px;
-  height: 3px;
-  background: #4ecdc4;
-  border-radius: 2px;
-}
-
-.massage-section .massage-card .card-content .card-text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555;
+.massage-grid__item {
+  max-width: 610px;
   margin-bottom: 20px;
-  min-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.massage-section .massage-card .card-content .price-list {
-  margin: 25px 0;
+.massage-grid__item.active .massage-grid__content {
+  max-height: 1000px;
+  padding: 15px 20px;
+  opacity: 1;
 }
 
-.massage-section .massage-card .card-content .price-list .price-item {
+.massage-grid__img {
+  width: 100%;
+  display: block;
+  border-radius: 15px 15px 0 0;
+}
+
+.massage-grid__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed #eee;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0px 0px 30px 30px;
+  padding: 10px 20px;
+  font-weight: 700;
+  background-color: var(--color-card-blue);
+  color: #003366;
+  font-size: 16px;
 }
 
-.massage-section .massage-card .card-content .price-list .price-item span {
-  color: #777;
+.massage-grid__title.active {
+  border-radius: 0px 0px 0px 0px;
 }
 
-.massage-section .massage-card .card-content .price-list .price-item strong {
-  color: #002244;
-  font-weight: 600;
+.massage-grid__heading {
+  color: var(--color-text-base);
+  font-family: var(--font-main);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  line-height: 40px;
 }
 
-.massage-section .massage-card .card-content .booking-btn {
-  display: block;
-  width: 100%;
-  padding: 15px;
-  background: -webkit-gradient(linear, left top, right top, from(#4ecdc4), to(#ff6b6b));
-  background: linear-gradient(to right, #4ecdc4, #ff6b6b);
-  color: white;
+.massage-grid__toggle {
+  background: var(--color-accent-light);
+  border-radius: 50%;
+  background-size: contain;
   border: none;
-  border-radius: 50px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
+  min-width: 74px;
+  height: 74px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 10px 10px 0 0;
   cursor: pointer;
+}
+
+.massage-grid__toggle:after {
+  content: "";
+}
+
+.massage-grid__content {
+  background-color: var(--color-card-blue);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.massage-section .massage-card .card-content .booking-btn:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#3ebbb3), to(#ee5a5a));
-  background: linear-gradient(to right, #3ebbb3, #ee5a5a);
-  -webkit-box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
-          box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+.massage-grid__text {
+  color: var(--color-text-base);
+  font-family: var(--font-main);
+  font-size: 20px;
+  font-weight: var(--font-weight-regular);
+  line-height: 25px;
+}
+
+.massage-grid__prices {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.massage-grid__prices div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.massage-grid__prices span {
+  font-weight: 700;
+}
+
+.massage-grid__btn {
+  background-color: #004a70;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.massage-grid__btn:hover {
+  background-color: #003654;
 }
 
 @media screen and (max-width: 1442px) {
@@ -3501,35 +3487,6 @@ button.swiper-pagination-bullet {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
-  }
-
-  .massage-section {
-    padding: 50px 0;
-  }
-
-  .massage-section .section-header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-bottom: 30px;
-  }
-
-  .massage-section .section-header .section-number {
-    margin-bottom: 10px;
-    margin-right: 0;
-  }
-
-  .massage-section .section-header .section-title {
-    font-size: 28px;
-  }
-
-  .massage-section .massage-grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
   }
 }
 
