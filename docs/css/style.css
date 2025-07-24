@@ -2371,9 +2371,6 @@ button.swiper-pagination-bullet {
   margin-bottom: 10px;
 }
 
-.no-webp .header1{
-  background: url("../images/header/1-0490.jpg") center/cover no-repeat; }
-
 .header1__container {
   padding: 30px 100px 145px 100px;
   width: -webkit-fill-available;
@@ -4217,5 +4214,3 @@ button.swiper-pagination-bullet {
     height: 172px;
   }
 }
-
-.webp .header1{ background: url(../images/header/1-0490.webp) center/cover no-repeat; }
