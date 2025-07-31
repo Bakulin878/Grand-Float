@@ -2558,7 +2558,7 @@ button.swiper-pagination-bullet {
   left: 0;
   top: 0;
   width: 100%;
-  height: 112%;
+  height: 722px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -3958,7 +3958,7 @@ button.swiper-pagination-bullet {
   }
 
   .header1__video {
-    height: 101%;
+    height: 647px;
   }
 
   .gift-faq__title {
@@ -4392,7 +4392,7 @@ button.swiper-pagination-bullet {
   }
 
   .header1__video {
-    height: 108%;
+    height: 647px;
   }
 
   body.lock {
@@ -4667,6 +4667,12 @@ button.swiper-pagination-bullet {
 
   .spa-grid__session {
     padding: 12px 0px 12px 0px;
+  }
+}
+
+@media screen and (max-width: 589px) {
+  .header1__video {
+    height: 695px;
   }
 }
 
