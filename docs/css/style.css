@@ -1844,7 +1844,8 @@ button.swiper-pagination-bullet {
   font-weight: var(--font-weight-bold);
   line-height: 40px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .procedure__step-text {
@@ -1970,6 +1971,22 @@ button.swiper-pagination-bullet {
   margin-bottom: 30px;
 }
 
+.faq__btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 296px;
+  background-color: var(--color-primary);
+  border-radius: 30px;
+  text-align: center;
+  color: var(--color-text-light);
+  font-family: var(--font-main);
+  font-size: 24px;
+  font-weight: var(--font-weight-bold);
+  line-height: 30px;
+  padding: 12px;
+}
+
 .reviews {
   padding: 40px 100px;
   display: -webkit-box;
@@ -2084,6 +2101,10 @@ button.swiper-pagination-bullet {
   -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
           transform: translateY(-2px);
+}
+
+.reviews__img {
+  height: 50px;
 }
 
 .gift {
@@ -2250,6 +2271,7 @@ button.swiper-pagination-bullet {
 }
 
 .footer__nav-btn_3 {
+  white-space: nowrap;
   padding: 8px 14px;
 }
 
@@ -2536,7 +2558,7 @@ button.swiper-pagination-bullet {
   left: 0;
   top: 0;
   width: 100%;
-  height: 115%;
+  height: 112%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -2545,37 +2567,28 @@ button.swiper-pagination-bullet {
 }
 
 .gift-about {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
+  padding: 60px 100px;
 }
 
 .gift-about__container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
 .gift-about__title {
-  text-align: center;
+  color: var(--color-text-base);
+  font-family: var(--font-main);
   font-size: 18px;
-  text-transform: uppercase;
-  color: #222;
+  font-weight: var(--font-weight-bold);
+  line-height: 18px;
+  text-align: center;
   margin-bottom: 40px;
-  letter-spacing: 1px;
 }
 
 .gift-about__layout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .gift-about__text-block {
@@ -2583,35 +2596,39 @@ button.swiper-pagination-bullet {
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
   background: #cfe0eb;
-  border-radius: 20px;
-  padding: 30px;
-  color: #002244;
+  border-radius: 30px 0 0 30px;
+  padding: 50px;
 }
 
 .gift-about__subtitle {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #002244;
+  color: var(--color-text-base);
+  font-family: var(--font-main);
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  line-height: 40px;
+  margin-bottom: 60px;
 }
 
 .gift-about__text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
+  color: var(--color-text-base);
+  font-family: var(--font-main);
+  font-size: 20px;
+  font-weight: var(--font-weight-regular);
+  line-height: 25px;
 }
 
 .gift-about__image-block {
+  border-radius: 0 30px 30px 0;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 45%;
           flex: 1 1 45%;
 }
 
 .gift-about__image {
+  border-radius: 0 30px 30px 0;
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 20px;
 }
 
 .gift-faq {
@@ -2860,9 +2877,9 @@ button.swiper-pagination-bullet {
 
 .massage-grid__container {
   padding: 60px 100px;
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
   gap: 20px;
 }
 
@@ -3200,9 +3217,9 @@ button.swiper-pagination-bullet {
 
 .spa-grid__container {
   padding: 60px 100px;
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
   gap: 20px;
 }
 
@@ -3360,6 +3377,14 @@ button.swiper-pagination-bullet {
           transform: translateY(-2px);
 }
 
+@media screen and (max-width: 1551px) {
+  .massage-grid__container {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
 @media screen and (max-width: 1442px) {
   .header__container {
     width: -webkit-fill-available;
@@ -3507,6 +3532,39 @@ button.swiper-pagination-bullet {
     font-size: 14px;
     font-weight: var(--font-weight-regular);
     line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .gift-about {
+    padding: 60px 200px;
+  }
+
+  .gift-about__layout {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .gift-about__text-block {
+    padding: 30px 20px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .gift-about__subtitle {
+    font-size: 29px;
+    line-height: 35px;
+    margin-bottom: 47px;
+  }
+
+  .gift-about__text {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .gift-about__image {
+    border-radius: 0 0 30px 30px;
   }
 }
 
@@ -3735,6 +3793,16 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media (max-width: 922px) {
+  .gift-about {
+    padding: 60px 100px;
+  }
+
+  .gift-about__subtitle {
+    margin-bottom: 33px;
+  }
+}
+
 @media screen and (max-width: 899px) {
   .reviews__card4 {
     display: none;
@@ -3890,7 +3958,7 @@ button.swiper-pagination-bullet {
   }
 
   .header1__video {
-    height: 94%;
+    height: 101%;
   }
 
   .gift-faq__title {
@@ -3942,18 +4010,20 @@ button.swiper-pagination-bullet {
             justify-content: flex-start;
   }
 
-  .gift-about__layout {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .gift-about__subtitle {
+    font-size: 27px;
+    line-height: 30px;
   }
 
-  .gift-about__text-block,
-  .gift-about__image-block {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+  .gift-about__text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 721px) {
+  .gift-about {
+    padding: 60px 40px;
   }
 }
 
@@ -4322,7 +4392,7 @@ button.swiper-pagination-bullet {
   }
 
   .header1__video {
-    height: 98%;
+    height: 108%;
   }
 
   body.lock {
@@ -4740,6 +4810,11 @@ button.swiper-pagination-bullet {
     padding: 12px 15px 12px 0px;
   }
 
+  .faq .faq__btn {
+    width: 242px;
+    padding: 10px;
+  }
+
   .reviews__title {
     font-size: 12px;
     line-height: 15px;
@@ -4860,6 +4935,26 @@ button.swiper-pagination-bullet {
 
   .procedure__footer {
     margin-top: 50px;
+  }
+
+  .gift-about {
+    padding: 60px 10px;
+  }
+
+  .gift-about__title {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .gift-about__subtitle {
+    font-size: 24px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+
+  .gift-about__text {
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 
